@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "k6oG7LodjsVVqBZQd0T/HIrA7z7pRZYQ+Qqo/5jaWl0=",
+  "Source": "Mission11_Harrison.API",
+  "BasePath": "_content/Mission11_Harrison.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
