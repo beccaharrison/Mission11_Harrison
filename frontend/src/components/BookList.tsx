@@ -6,7 +6,6 @@ function BookList({ selectedCategories }: { selectedCategories: string[] }) {
   const [books, setBooks] = useState<Book[]>([]);
   const [pageSize, setPageSize] = useState<number>(5);
   const [pageNum, setPageNum] = useState<number>(1);
-  const [totalItems, setTotalItems] = useState<number>(1);
   const [totalPages, setTotalPages] = useState<number>(0);
   const navigate = useNavigate();
 
@@ -14,35 +13,19 @@ function BookList({ selectedCategories }: { selectedCategories: string[] }) {
     const fetchBooks = async () => {
       // Create the query parameters for categories
       const categoryParams = selectedCategories
-        .map((cat) => `bookCategories=${encodeURIComponent(cat)}`)
+        .map((cat) => `bookCategory=${encodeURIComponent(cat)}`)
         .join('&');
 
       // Build the full request URL including page size, page number, and categories
-      const url = `https://localhost:5000/Book/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}${selectedCategories.length ? `&${categoryParams}` : ''}`;
+      const response = await fetch(
+        `https://localhost:5000/Book/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}${selectedCategories.length ? `&${categoryParams}` : ''}`
+      );
 
-      console.log(`Fetching books from: ${url}`); // Log the full URL for debugging
+      const data = await response.json();
 
-      try {
-        const response = await fetch(url);
-
-        // Log the response for debugging
-        console.log('Raw response:', response);
-
-        if (!response.ok) {
-          console.error('Error fetching books:', response.statusText);
-          return;
-        }
-
-        const data = await response.json();
-        console.log('Fetched books:', data.books); // Check the response data
-
-        // Update state with the fetched books
-        setBooks(data.books);
-        setTotalItems(data.totalNumBooks);
-        setTotalPages(Math.ceil(data.totalNumBooks / pageSize));
-      } catch (error) {
-        console.error('Error while fetching books:', error);
-      }
+      // Update state with the fetched books
+      setBooks(data.books);
+      setTotalPages(Math.ceil(data.totalNumBooks / pageSize));
     };
 
     // Trigger fetchBooks whenever pageSize, pageNum, or selectedCategories change

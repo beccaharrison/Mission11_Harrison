@@ -9,7 +9,6 @@ function CategoryFilter({
   setSelectedCategories: (categories: string[]) => void;
 }) {
   const [categories, setCategories] = useState<string[]>([]);
-
   useEffect(() => {
     const fetchCategories = async () => {
       try {
