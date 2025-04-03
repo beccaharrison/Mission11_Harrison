@@ -19,15 +19,28 @@ export const fetchBooks = async (
       .join('&');
 
     // Build the full request URL including page size, page number, and categories
-    const response = await fetch(
-      `${API_URL}/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}${selectedCategories.length ? `&${categoryParams}` : ''}`
-    );
+    const url = `${API_URL}/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}${selectedCategories.length ? `&${categoryParams}` : ''}`;
+
+    // Debugging: Log the final URL
+    console.log('Fetching books with URL:', url);
+
+    const response = await fetch(url);
+
     if (!response.ok) {
-      throw new Error('Failed to fetch projects');
+      // Log status code and response text for debugging
+      const errorDetails = await response.text();
+      console.error(
+        `Failed to fetch books. Status: ${response.status}, Error Details: ${errorDetails}`
+      );
+      throw new Error(
+        `Failed to fetch books. Status: ${response.status}, Error: ${errorDetails}`
+      );
     }
-    return await response.json();
+
+    const data = await response.json();
+    return data;
   } catch (error) {
-    console.error('Error fetching book', error);
+    console.error('Error fetching books:', error);
     throw error;
   }
 };
