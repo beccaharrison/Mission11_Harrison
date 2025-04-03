@@ -1,5 +1,3 @@
-import React from 'react';
-
 function WelcomeBand() {
   return (
     <div className="row bg-primary text-white p-4 align-items-center justify-content-center">

@@ -4,7 +4,6 @@ import { useCart } from '../context/CartContext';
 const CartSummary = () => {
   const navigate = useNavigate();
   const { cart } = useCart();
-  const total = cart.reduce((sum, item) => sum + item.subtotal, 0);
   const totalAmount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
@@ -24,7 +23,7 @@ const CartSummary = () => {
       }}
       onClick={() => navigate('/cart')}
     >
-      🛒 <strong>${total.toFixed(2)}</strong>
+      🛒 <strong>${totalAmount.toFixed(2)}</strong>
     </div>
   );
 };
