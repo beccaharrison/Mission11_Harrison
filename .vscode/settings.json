@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "undefined/subscriptions/eaae0308-174d-4284-b4fb-44f7d682154d/resourceGroups/appsvc_windows_eastus/providers/Microsoft.Web/sites/Mission13-Harrison-Backend",
+  "appService.deploySubpath": "backend/Mission11_Harrison.API/publish"
+}
