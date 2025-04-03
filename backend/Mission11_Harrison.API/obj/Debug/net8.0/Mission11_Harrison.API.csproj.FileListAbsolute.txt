@@ -142,3 +142,9 @@
 /Users/rebeccaharrison/Desktop/IS413/Mission11_Harrison/backend/Mission11_Harrison.API/bin/Debug/net8.0/publish/Mission11_Harrison.API.deps.json
 /Users/rebeccaharrison/Desktop/IS413/Mission11_Harrison/backend/Mission11_Harrison.API/bin/Debug/net8.0/publish/Mission11_Harrison.API.runtimeconfig.json
 /Users/rebeccaharrison/Desktop/IS413/Mission11_Harrison/backend/Mission11_Harrison.API/bin/Debug/net8.0/publish/Mission11_Harrison.API.staticwebassets.endpoints.json
+/Users/rebeccaharrison/Desktop/IS413/Mission11_Harrison/backend/Mission11_Harrison.API/bin/Debug/net8.0/publish/publish/web.config
+/Users/rebeccaharrison/Desktop/IS413/Mission11_Harrison/backend/Mission11_Harrison.API/bin/Debug/net8.0/publish/publish/appsettings.Development.json
+/Users/rebeccaharrison/Desktop/IS413/Mission11_Harrison/backend/Mission11_Harrison.API/bin/Debug/net8.0/publish/publish/appsettings.json
+/Users/rebeccaharrison/Desktop/IS413/Mission11_Harrison/backend/Mission11_Harrison.API/bin/Debug/net8.0/publish/publish/Mission11_Harrison.API.deps.json
+/Users/rebeccaharrison/Desktop/IS413/Mission11_Harrison/backend/Mission11_Harrison.API/bin/Debug/net8.0/publish/publish/Mission11_Harrison.API.runtimeconfig.json
+/Users/rebeccaharrison/Desktop/IS413/Mission11_Harrison/backend/Mission11_Harrison.API/bin/Debug/net8.0/publish/publish/Mission11_Harrison.API.staticwebassets.endpoints.json

@@ -39,6 +39,7 @@ namespace Mission11_Harrison.API.Controllers
                     b.Price
                 })
                 .ToList();
+            
             var totalNumBooks = query.Count();
 
             var allBooks = new
